@@ -14,23 +14,26 @@ const TopSection = ({ filter, setFilter }: Props) => {
   // const [extensionsList, setExtensionsList] = useState(extensions);
 
   return (
-    <Box>
-      <HStack>
+    <Box mb={{ base: 6, md: 8 }}>
+      <HStack display="flex" justifyContent="space-between" alignItems="center">
         <Headings>Extensions List</Headings>
         <ButtonGroup>
           <Buttons
+            colorPalette={filter === "all" ? "red" : "gray"}
             variant={filter === "all" ? "solid" : "outline"}
             onClick={() => setFilter("all")}
           >
             All
           </Buttons>
           <Buttons
+            colorPalette={filter === "active" ? "red" : "gray"}
             variant={filter === "active" ? "solid" : "outline"}
             onClick={() => setFilter("active")}
           >
             Active
           </Buttons>
           <Buttons
+          colorPalette={filter === "inactive" ? "red" : "gray"}
             variant={filter === "inactive" ? "solid" : "outline"}
             onClick={() => setFilter("inactive")}
           >

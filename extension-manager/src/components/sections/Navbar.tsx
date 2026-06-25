@@ -8,9 +8,14 @@ const Navbar = () => {
   const { toggleColorMode, colorMode } = useColorMode();
 
   return (
-    <Box>
-      <HStack>
-        <Image src={logo} alt="Logo" />
+    <Box
+      mb={{ base: 8, md: 10 }}
+      padding={{ base: 2 }}
+      borderRadius="xl"
+      background="#212636"
+    >
+      <HStack display="flex" justifyContent="space-between" alignItems="center">
+        <Image src={logo} alt="Logo" className="logo" />
         <Image
           src={colorMode === "light" ? moon : sun}
           alt={

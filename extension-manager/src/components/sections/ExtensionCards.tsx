@@ -1,4 +1,4 @@
-import { Card, SimpleGrid, Switch } from "@chakra-ui/react";
+import { Card, HStack, SimpleGrid, Switch, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { extensions } from "../data/extensionData";
 import Buttons from "./Buttons";
@@ -55,11 +55,15 @@ const ExtensionCards = ({ extensionsList, setExtensionsList, filter }: Props) =>
   return (
     <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={2}>
       {filteredExtensions.map((extension) => (
-        <Card.Root key={extension.id}>
+        <Card.Root key={extension.id} borderRadius="xl" background="#212636">
           <Card.Body>
-            <img src={extension.logo} alt={extension.name} width="20%" />
-            <Card.Title>{extension.name}</Card.Title>
-            <Card.Description>{extension.description}</Card.Description>
+            <HStack>
+              <img src={extension.logo} alt={extension.name} width="20%" />
+              <VStack alignItems="flex-start" gap={2} mt={2}>
+                <Card.Title>{extension.name}</Card.Title>
+                <Card.Description>{extension.description}</Card.Description>
+              </VStack>
+            </HStack>
           </Card.Body>
           <Card.Footer>
             <Buttons
