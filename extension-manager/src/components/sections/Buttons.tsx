@@ -9,10 +9,10 @@ interface ButtonsProps extends ChakraButtonProps{
 
 const Buttons = ({children, ...props}:ButtonsProps) => {
     return (
-      <Button {...props}>
+      <Button {...props} borderRadius="full">
         {children}
       </Button>
-  )
+    );
 }
 
 export default Buttons

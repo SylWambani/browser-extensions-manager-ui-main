@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
-/* .logo{
-    filter: brightness(0) invert(1);
+/* [data-state="checked"] .chakra-switch__control {
+  background-color: #de473f !important;
 } */
+
+[data-state="unchecked"].chakra-switch__control {
+  background-color: #545969 !important;
+}
