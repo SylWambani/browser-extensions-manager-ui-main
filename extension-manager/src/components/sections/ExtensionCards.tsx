@@ -1,5 +1,5 @@
 import { Card, HStack, SimpleGrid, Switch, VStack } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useColorModeValue } from "../ui/color-mode";
 import { extensions } from "../data/extensionData";
 import Buttons from "./Buttons";
 
@@ -10,7 +10,11 @@ interface Props {
 }
 
 const ExtensionCards = ({ extensionsList, setExtensionsList, filter }: Props) => {
-  console.log("extensionsList:", extensionsList);
+  // console.log("extensionsList:", extensionsList);
+  const navBg = useColorModeValue(
+      "#fbfdfe", // light
+      "#212636", // dark
+    );
 
   const handleToggle = (id: number) => {
     setExtensionsList((prev) =>
@@ -33,11 +37,11 @@ const ExtensionCards = ({ extensionsList, setExtensionsList, filter }: Props) =>
   return (
     <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={2}>
       {filteredExtensions.map((extension) => (
-        <Card.Root key={extension.id} borderRadius="xl" background="#212636">
+        <Card.Root key={extension.id} borderRadius="xl" background={navBg}>
           <Card.Body>
-            <HStack display='flex' alignItems="flex-start">
+            <HStack display="flex" alignItems="flex-start">
               <img src={extension.logo} alt={extension.name} width="20%" />
-              <VStack  alignItems="flex-start" gap={2} >
+              <VStack alignItems="flex-start" gap={2}>
                 <Card.Title>{extension.name}</Card.Title>
                 <Card.Description>{extension.description}</Card.Description>
               </VStack>
@@ -46,7 +50,12 @@ const ExtensionCards = ({ extensionsList, setExtensionsList, filter }: Props) =>
           <Card.Footer display="flex" justifyContent="space-between">
             <Buttons
               variant="outline"
-              borderColor="white"
+              borderColor="#545969"
+              _hover={{
+                backgroundColor: "#c7221a",
+                color: "#09153e",
+                border: "none",
+              }}
               onClick={() => handleRemove(extension.id)}
             >
               Remove
