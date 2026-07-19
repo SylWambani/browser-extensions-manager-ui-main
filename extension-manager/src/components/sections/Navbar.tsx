@@ -8,10 +8,7 @@ import { useColorMode, useColorModeValue } from "../ui/color-mode";
 const Navbar = () => {
   const { toggleColorMode, colorMode } = useColorMode();
   const logo = useColorModeValue(logoLight, logoDark);
-  const navBg = useColorModeValue(
-    "#fbfdfe", // light
-    "#212636", // dark
-  );
+  const navBg = useColorModeValue("#fbfdfe", "#212636");
   const themeBtn = useColorModeValue("#ededed", "#545969");
 
   return (

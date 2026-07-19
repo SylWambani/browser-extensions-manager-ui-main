@@ -14,11 +14,7 @@ const ExtensionCards = ({
   setExtensionsList,
   filter,
 }: Props) => {
-  // console.log("extensionsList:", extensionsList);
-  const navBg = useColorModeValue(
-    "#fbfdfe", // light
-    "#212636", // dark
-  );
+  const navBg = useColorModeValue("#fbfdfe", "#212636");
   const solidTextColor = useColorModeValue("#fbfdfe", "#09153e");
   const switchUncheckedBg = useColorModeValue("#d6e2f5", "#3a3f55");
 

@@ -10,11 +10,7 @@ interface Props {
 }
 
 const TopSection = ({ filter, setFilter }: Props) => {
-  // const [extensionsList, setExtensionsList] = useState(extensions);
-  const navBg = useColorModeValue(
-    "#fbfdfe", // light
-    "#212636", // dark
-  );
+  const navBg = useColorModeValue("#fbfdfe", "#212636");
   const outlineTextColor = useColorModeValue("#09153e", "#fbfdfe");
   const outlineHoverBg = useColorModeValue("#e2e8f0", "#545969");
   const solidTextColor = useColorModeValue("#fbfdfe", "#09153e");
