@@ -22,6 +22,8 @@ function App() {
       padding={{ base: 4, md: 8 }}
       margin="0"
       minH="100vh"
+      maxW="100vw"
+      overflow="hidden"
       background={navBg}
     >
       <Navbar />

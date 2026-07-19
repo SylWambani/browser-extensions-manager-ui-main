@@ -9,12 +9,18 @@ interface Props {
   filter: "all" | "active" | "inactive";
 }
 
-const ExtensionCards = ({ extensionsList, setExtensionsList, filter }: Props) => {
+const ExtensionCards = ({
+  extensionsList,
+  setExtensionsList,
+  filter,
+}: Props) => {
   // console.log("extensionsList:", extensionsList);
   const navBg = useColorModeValue(
-      "#fbfdfe", // light
-      "#212636", // dark
-    );
+    "#fbfdfe", // light
+    "#212636", // dark
+  );
+  const solidTextColor = useColorModeValue("#fbfdfe", "#09153e");
+  const switchUncheckedBg = useColorModeValue("#d6e2f5", "#3a3f55");
 
   const handleToggle = (id: number) => {
     setExtensionsList((prev) =>
@@ -53,7 +59,7 @@ const ExtensionCards = ({ extensionsList, setExtensionsList, filter }: Props) =>
               borderColor="#545969"
               _hover={{
                 backgroundColor: "#c7221a",
-                color: "#09153e",
+                color: solidTextColor,
                 border: "none",
               }}
               onClick={() => handleRemove(extension.id)}
@@ -66,7 +72,13 @@ const ExtensionCards = ({ extensionsList, setExtensionsList, filter }: Props) =>
               onCheckedChange={() => handleToggle(extension.id)}
             >
               <Switch.HiddenInput />
-              <Switch.Control>
+              <Switch.Control
+                style={{
+                  backgroundColor: extension.active
+                    ? "#c7221a"
+                    : switchUncheckedBg,
+                }}
+              >
                 <Switch.Thumb />
               </Switch.Control>
               <Switch.Label />

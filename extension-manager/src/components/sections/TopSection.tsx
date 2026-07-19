@@ -20,8 +20,14 @@ const TopSection = ({ filter, setFilter }: Props) => {
   const solidTextColor = useColorModeValue("#fbfdfe", "#09153e");
 
   return (
-    <Box mb={{ base: 6, md: 8 }}>
-      <HStack display="flex" justifyContent="space-between" alignItems="center">
+    <Box
+      mb={{ base: 6, md: 8 }}
+      display="flex"
+      flexDirection={{ base: "column", md: "row" }}
+      justifyContent="space-between"
+      alignItems="center"
+      gap={4}
+    >
         <Headings>Extensions List</Headings>
         <ButtonGroup>
           <Buttons
@@ -70,7 +76,6 @@ const TopSection = ({ filter, setFilter }: Props) => {
             Inactive
           </Buttons>
         </ButtonGroup>
-      </HStack>
     </Box>
   );
 };
