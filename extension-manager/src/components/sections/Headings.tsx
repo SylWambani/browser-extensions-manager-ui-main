@@ -6,8 +6,8 @@ interface TitlesProps {
 
 const Headings = ({children}:TitlesProps) => {
   return (
-    <Heading>{children}</Heading>
-  )
+    <Heading fontSize="2xl">{children}</Heading>
+  );
 }
 
 export default Headings

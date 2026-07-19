@@ -22,7 +22,12 @@ const Navbar = () => {
       background={navBg}
     >
       <HStack display="flex" justifyContent="space-between" alignItems="center">
-        <Image src={logo} alt="Logo" className="logo" />
+        <Image
+          src={logo}
+          alt="Logo"
+          className="logo"
+          width={{ base: "45%", md: "15%" }}
+        />
         <Box
           _hover={{ backgroundColor: themeBtn }}
           w="40px"
@@ -43,6 +48,7 @@ const Navbar = () => {
             cursor="pointer"
             role="button"
             aria-label="Toggle color mode"
+            width={{ base: "50%", md: "50%" }}
           />
         </Box>
       </HStack>
