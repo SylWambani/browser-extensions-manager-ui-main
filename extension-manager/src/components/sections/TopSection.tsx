@@ -1,4 +1,4 @@
-import { Box, ButtonGroup, HStack } from "@chakra-ui/react";
+import { Box, ButtonGroup} from "@chakra-ui/react";
 import { useColorModeValue } from "../ui/color-mode";
 import Headings from "./Headings";
 import Buttons from "./Buttons";

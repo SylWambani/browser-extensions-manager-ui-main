@@ -13,8 +13,8 @@ function App() {
   const [extensionsList, setExtensionsList] = useState(extensions);
   const [filter, setFilter] = useState<FilterType>("all");
   const navBg = useColorModeValue(
-    "linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%)", // light
-    "linear-gradient(180deg, #040918 0%, #091540 100%)", // dark
+    "linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%)", 
+    "linear-gradient(180deg, #040918 0%, #091540 100%)", 
   );
 
   return (
