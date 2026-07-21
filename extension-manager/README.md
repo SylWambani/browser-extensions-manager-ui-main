@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+# Browser Extension Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive browser extension manager UI built as a Frontend Mentor challenge. Users can view, filter, enable/disable, and remove browser extensions with support for light and dark mode.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 [View Live](https://your-vercel-url.vercel.app)
 
-## React Compiler
+## Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Light Mode
 
-## Expanding the ESLint configuration
+![Light Mode](./images/light-mode.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Dark Mode
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+![Dark Mode](./images/dark-mode.png)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Built With
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- [React](https://react.dev/) - UI library
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Vite](https://vitejs.dev/) - Build tool
+- [Chakra UI v3](https://www.chakra-ui.com/) - Component library
+- [next-themes](https://github.com/pacocoursey/next-themes) - Dark/light mode
+
+## Features
+
+- 🌗 Toggle between light and dark mode
+- 🔍 Filter extensions by All, Active, or Inactive
+- ✅ Enable or disable extensions with a toggle switch
+- 🗑️ Remove extensions from the list
+- 📱 Fully responsive across mobile, tablet, and desktop
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js installed on your machine
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/extension-manager.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Navigate to the project folder:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd extension-manager
 ```
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+1. Start the development server:
+
+```bash
+npm run dev
+```
+
+1. Open your browser and visit `http://localhost:5173`
+
+## What I Learned
+
+- Managing color mode with Chakra UI and next-themes
+- Building responsive layouts using Chakra's responsive props
+- Styling SVGs and toggling assets based on theme
+- Using TypeScript interfaces for component props
+
+## Acknowledgements
+
+- Challenge by [Frontend Mentor](https://www.frontendmentor.io)
