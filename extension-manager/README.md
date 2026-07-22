@@ -4,7 +4,7 @@ A responsive browser extension manager UI built as a Frontend Mentor challenge. 
 
 ## Live Demo
 
-🔗 [View Live](https://your-vercel-url.vercel.app)
+🔗 [View Live](https://browser-extensions-manager-ui-main-alpha.vercel.app/)
 
 ## Preview
 
